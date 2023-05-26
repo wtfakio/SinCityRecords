@@ -1,0 +1,425 @@
+/* styles.css */
+
+/* Reset default browser styles */
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: 'No Mercy';
+  background-color: #111;
+  color: #fff;
+  line-height: 1.;
+  position: relative;
+  min-height: 100vh;
+}
+
+@font-face {
+  font-family: 'No Mercy';
+  src: url('NoMercy.otf') format('opentype');
+}
+
+header {
+  background-color: #000;
+  padding: 20px;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+main {
+  padding: 20px;
+  padding-bottom: 50px;
+}
+
+section {
+  background-color: #222;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.nav-button {
+  display: inline-block;
+  position: relative;
+  animation: flash 2s infinite;
+}
+
+@keyframes flash {
+  0%, 50% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.5;
+  }
+}
+
+.nav-button img {
+  width: 100px;
+  height: 100px;
+}
+
+.nav-button:hover {
+  animation: none;
+  filter: brightness(1.5); /* Add a brightness effect on hover */
+}
+
+
+.artist {
+  display: inline-block;
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #333;
+  text-align: center;
+}
+
+.artist img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.artist h3 {
+  color: #fff;
+  font-size: 25px;
+}
+
+.artist p {
+  color: #ccc;
+  font-size: 18px;
+}
+
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  max-width: 300px;
+  height: auto;
+}
+
+
+
+
+.music-section {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.music-artist {
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  text-align: center;
+}
+
+.music-artist h2 {
+  margin-bottom: 10px;
+  font-size: 44px;
+  color: #ff5252;
+  text-transform: uppercase;
+}
+
+.music-artist ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.music-artist li {
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.music-artist a {
+  text-decoration: none;
+  color: #ff5252;
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #222;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.music-artist a:hover {
+  background-color: #ff5252;
+}
+
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.bw-image {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.color-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.artist:hover .color-image {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-family: 'No Mercy';
+  font-size: 20px;
+  color: #FF0000;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #FF0000;
+  border-radius: 5px;
+  background-color: #000000;
+  color: #FF0000;
+  font-family: 'No Mercy', sans-serif;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #FF0000;
+  box-shadow: 0 0 5px #FF0000;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FF0000;
+  color: #000000;
+  font-family: 'No Mercy', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #000000;
+  color: #FF0000;
+}
+
+
+
+.artist-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.artist-item {
+  width: 180px;
+  height: 180px;
+  margin: 20px;
+}
+
+.artist-item a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.artist-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.artist-item .artist-name {
+  margin-top: 10px;
+  font-family: 'No Mercy';
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.artist-item img:hover {
+  filter: grayscale(0%);
+  cursor: pointer;
+}
+
+
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'No Mercy';
+  background-color: #000;
+  color: #fff;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 0px;
+  font-size: 0px;
+  text-align: center;
+}
+
+.content {
+  padding: 20px;
+}
+
+.artist-banner img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.artist-banner img:hover {
+  filter: none;
+}
+
+.recent-release {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.recent-release h2 {
+  font-size: 44px;
+  color: #fff;
+}
+
+.release-cover img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 20px auto;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.release-cover img:hover {
+  filter: none;
+}
+
+.listen-to {
+  background-color: #000;
+  color: #fff;
+  font-size: 23px;
+  padding: 20px;
+  text-align: center;
+}
+
+.listen-to h3 {
+  font-size: 28px;  
+  margin: 0 0 10px;
+}
+
+.song-name {
+  font-size: 25px;
+  margin: 0;
+}
+
+.platform-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.platform-buttons a {
+  display: inline-block;
+  margin-right: 10px;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.platform-buttons a:hover {
+  transform: scale(1.2);
+}
+
+.platform-buttons img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
