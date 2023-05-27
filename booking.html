@@ -14,7 +14,7 @@
     <nav>
       <ul>
         <li><a href="index.html" class="nav-button"><img src="home.png" alt="Home"></a></li>
-        <li><a href="music.html" class="nav-button"><img src="music.png" alt="Music"></a></li>
+        <li><a href="shows.html" class="nav-button"><img src="shows.png" alt="Shows"></a></li>
         <li><a href="artist.html" class="nav-button"><img src="artist.png" alt="Artist"></a></li>
         <li><a href="booking.html" class="nav-button"><img src="booking.png" alt="Booking"></a></li>
       </ul>
@@ -22,19 +22,26 @@
   </header>
 
   <section class="booking-section">
-    <h2>Booking Session</h2>
+    <h2>Book your session now!</h2>
     <form action="https://formspree.io/f/mrgvvyzb" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-      
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="_replyto" required>
-      
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-      
-        <button type="submit">Submit</button>
-      </form>
+      <label for="artist-name">Artist Name:</label>
+      <input type="text" id="artist-name" name="artist-name" required>
+    
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="_replyto" required>
+    
+      <label for="phone-number">Phone Number:</label>
+      <input type="tel" id="phone-number" name="phone-number" required>
+    
+      <label for="calendar">Calendar:</label>
+      <input type="date" id="calendar" name="calendar" required>
+    
+      <label for="time">Time:</label>
+      <input type="time" id="time" name="time" required>
+    
+      <button type="submit">Submit</button>
+    </form>
+    
       
 
       <footer>
